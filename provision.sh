@@ -23,10 +23,10 @@ done
 # Check permissions
 if [ "$EUID" -ne 0 ]; then
     echo "Please run as root"
-    exit
+    exit    
 fi
 
-if [ -f /lib/systemd/system/hciuart.service ]; then
+if [ ! -f /lib/systemd/system/hciuart.service ]; then
     echo "Please make sure you got right drivers for your bluetooth"
 fi
 
@@ -41,7 +41,7 @@ if ! command -v bt-network &> /dev/null; then
 fi
 
 # Check if ran from oneliner or git clone
-if ([ ! -f .gitignore ] || [ ! -d systemd-files ])
+if ([ ! -d systemd-files ])
 then
     rm -rf /tmp/bt-pan
     git clone https://github.com/Mirdinus/bt-pan /tmp/bt-pan
