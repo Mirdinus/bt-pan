@@ -8,7 +8,7 @@ __Original work done by @logan-gunthorpe over at [Stack Exchange](https://raspbe
 
 ## Standart way
   * `git clone https://github.com/Mirdinus/bt-pan`
-  * `cd github.com bt-pan`
+  * `cd bt-pan`
   * `bash provision.sh`
 
 ## One-liner
