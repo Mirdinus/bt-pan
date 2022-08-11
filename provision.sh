@@ -43,6 +43,7 @@ fi
 # Check if ran from oneliner or git clone
 if ([ ! -f .gitignore ] || [ ! -d systemd-files ])
 then
+    rm -rf /tmp/bt-pan
     git clone https://github.com/Mirdinus/bt-pan /tmp/bt-pan
     cd /tmp/bt-pan
 fi
